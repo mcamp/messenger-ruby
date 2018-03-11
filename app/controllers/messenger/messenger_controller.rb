@@ -1,5 +1,5 @@
 module Messenger
-  class MessengerController < ActionController::Base
+  class MessengerController < BotController
     def validate
       if verify_token_valid? && access_token_valid?
         render json: params["hub.challenge"]
